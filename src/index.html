@@ -1,12 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <title>My First Parcel App</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="app.js"></script>
   </head>
+
   <body>
-    <h1>Hello, World!</h1>
+    <header class="header header-inicio">
+      <div class="contenido-header contenedor">
+        <div class="barra">
+          <div class="logo">
+            <img src="./img/logo.png" alt="logo" />
+          </div>
+
+          <nav class="nav-principal">
+            <a class="activo" href="index.html">Inici</a>
+            <a href="actividades.html">Activitats</a>
+            <a href="presentacion.html">Presentació</a>
+            <a href="enlaces.html">Enllaços</a>
+          </nav>
+        </div>
+
+        <div class="texto-header">
+          <h1>El Prat, el meu lloc al món</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="contenedor contenido-principal">
+      <h2><span>Vine a conèixer</span> El Prat de Llobregat</h2>
+
+      <div class="contenido-inicio">
+        <div class="imagen">
+          <picture>
+            <source srcset="./img/correfoc1.jpg" type="image/jpeg" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="./img/correfoc1.jpg"
+              lazyalt="imagen"
+              width="500"
+              height="300"
+            />
+          </picture>
+        </div>
+
+        <div class="texto">
+          <p>
+            Descobreix El Prat de Llobregat, una ciutat plena de vida i natura
+            al cor del Baix Llobregat. Amb espais únics com el Parc Natural del
+            Delta, platges tranquil·les i una rica tradició cultural, El Prat és
+            el lloc perfecte per gaudir d'activitats a l'aire lliure, la
+            gastronomia local i el caliu de la seva gent.
+          </p>
+
+          <blockquote>Modernitat i arrels!</blockquote>
+
+          <p>
+            Visita els mercats locals, explora els camins naturals i coneix la
+            història d'una ciutat en constant evolució. Al Prat de Llobregat,
+            trobaràs una combinació única de modernitat i tradició, amb
+            activitats per a tota la família.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor contenido-footer bg-white">
+        <div class="footer-box">
+          <h3>Oficina d'informació</h3>
+          <p>Plaça de la Vila, 1</p>
+          <p>08820 El Prat de Llobregat</p>
+        </div>
+        <div class="footer-box">
+          <h3>Contacte</h3>
+          <p>Tel. 933 790 050</p>
+          <a href="tel:+933790050">Trucar</a>
+        </div>
+        <div class="footer-box">
+          <h3>Horari</h3>
+          <p>Dl-Dj: 08:00 - 18:00</p>
+          <p>Dv-Ds: 09:00 - 14:00</p>
+          <p>Diumenges i festius: Tancat</p>
+        </div>
+      </div>
+      <p class="licencia">El Prat, el meu lloc al món. CC BY-NC-SA 2.0.</p>
+    </footer>
   </body>
 </html>
