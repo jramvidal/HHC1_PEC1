@@ -1,7 +1,5 @@
 import "./styles.scss";
 
-const name = 'world';
-console.log(`Hello ${name}`);
 
 document.addEventListener('DOMContentLoaded', function() {
     const imagenes = document.querySelectorAll('.imagen-interactiva');
