@@ -14,20 +14,20 @@ $tablet: 768px;
 $desktop: 1024px;
 
 // Colores
-$primario: #7b2a3b;
-$secundario: #c39c63;
+$primario: #7b2a3b; // Color primario (granate)
+$secundario: #c39c63; // Color secundario
 $negro: #000000;
 $blanco: #ffffff;
 $grisClaro: #eceeef;
 $marronClaro: #ebe7de;
 
 // Unidades
-$separacion: 5rem;
+$separacion: 5rem; // Margen principal entre secciones
 
 /* G L O B A L E S */
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // Base 10px para calcular rem
   box-sizing: border-box;
 }
 *,
@@ -78,14 +78,14 @@ h3 {
   line-height: 1.5;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4rem; // Tamaño específico para el título principal
 }
 h2 {
   font-size: 3.6rem;
   color: $primario;
 
   span {
-    color: $secundario;
+    color: $secundario; // Color secundario para los subtítulos
     font-size: 1.8rem;
     display: block;
   }
@@ -97,7 +97,7 @@ h2 {
     height: 8rem;
     margin: 10 auto;
     background-image: url(./img/escut.png);
-    background-size: 8rem;
+    background-size: 8rem; // Icono decorativo en el subtítulo
   }
 }
 
@@ -114,7 +114,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 3.2rem; // Tamaño de fuente específico para encabezados H3
 }
 
 /* M I X I N S */
@@ -137,6 +137,7 @@ h3 {
   }
 }
 
+// Mixin para diseño de cuadrícula (grid) con columnas y espaciado personalizados
 @mixin grid($columnas, $espaciado) {
   display: grid;
   grid-template-columns: repeat($columnas, 1fr);
@@ -149,13 +150,13 @@ h3 {
   margin-top: 5rem;
   .listado-iconos {
     @include tablet {
-      @include grid(3, 2rem);
+      @include grid(3, 2rem); // Distribución en 3 columnas en pantallas tablet
     }
 
     li {
       img {
         margin: 0 auto;
-        width: 6rem;
+        width: 6rem; // Tamaño de los iconos en presentación
       }
       p {
         font-family: $fuenteCursiva;
@@ -176,29 +177,29 @@ h3 {
   @include tablet {
     padding: 10rem;
     margin-top: -10rem;
-    position: relative;
+    position: relative; // Ajuste de posición en pantallas tablet y superiores
   }
 }
 
 /* P R E S E N T A C I O N  -  G A L E R I A */
 
 .galeria {
-  @include grid(2, 2rem);
+  @include grid(2, 2rem); // Configuración de galería en 2 columnas
 
   @include desktop {
-    @include grid(4, 2rem);
+    @include grid(4, 2rem); // Distribución en 4 columnas en pantallas grandes
   }
 
   .imagen {
     img {
       height: 30rem;
       width: 30rem;
-      object-fit: cover;
+      object-fit: cover; // Ajuste de imagen para cubrir el contenedor
     }
 
     @include desktop {
       &:nth-child(1) {
-        grid-row: 1 / 3;
+        grid-row: 1 / 3; // Imagen principal ocupando más espacio en pantalla grande
         img {
           height: 62rem;
           object-position: center;
@@ -207,13 +208,13 @@ h3 {
       &:nth-child(2) {
         grid-column: 2 / 4;
         img {
-          width: 62rem;
+          width: 62rem; // Imagen expandida horizontalmente en pantalla grande
         }
       }
       &:nth-child(4) {
         grid-row: 2 / 4;
         img {
-          height: 62rem;
+          height: 62rem; // Imagen expandida verticalmente en pantalla grande
         }
       }
       &:nth-child(5) {
@@ -237,7 +238,7 @@ h3 {
       &:nth-child(8) {
         grid-column: 2 / 5;
         img {
-          width: 94rem;
+          width: 94rem; // Imagen ocupando más espacio horizontal en pantalla grande
         }
       }
       &:nth-child(9) {
@@ -259,10 +260,10 @@ h3 {
 /* P R E S E N T A C I O N  -  O P I N I O N E S */
 
 .nuestras-opiniones {
-  padding: 10rem 2rem;
+  padding: 10rem 2rem; // Espaciado superior e inferior para la sección de opiniones
 
   @include tablet {
-    padding: 10rem;
+    padding: 10rem; // Aumento de padding en pantallas más grandes
   }
 
   .opinion {
@@ -270,13 +271,13 @@ h3 {
     padding: 2rem 4rem;
     max-width: 50rem;
     margin: 0 auto;
-    border-radius: 1rem;
+    border-radius: 1rem; // Borde redondeado para las opiniones
 
     .autor {
       text-align: right;
       font-size: 2.4rem;
       color: $primario;
-      font-family: $fuenteCursiva;
+      font-family: $fuenteCursiva; // Estilo en cursiva para el autor
     }
   }
 }
@@ -289,7 +290,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   @include tablet {
-    min-height: 70rem;
+    min-height: 70rem; // Altura mínima en tablets
   }
 
   &::before {
@@ -300,7 +301,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.6;
+    opacity: 0.6; // Superposición oscura para mejorar la legibilidad
   }
 
   .contenido-header {
@@ -312,7 +313,7 @@ h3 {
       text-transform: uppercase;
       margin-top: 5rem;
       @include tablet {
-        margin-top: 10rem;
+        margin-top: 10rem; // Mayor margen en pantallas más grandes
       }
     }
   }
@@ -359,11 +360,11 @@ h3 {
     }
 
     &:hover {
-      color: $secundario;
+      color: $secundario; // Cambio de color
     }
 
     &.activo {
-      color: $secundario;
+      color: $secundario; // Color especial para el enlace activo
     }
   }
 }
@@ -376,12 +377,12 @@ h3 {
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; // Alineación centrada en tablets
   }
 
   .logo {
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto; // Tamaño automático para el logo
 
     @include tablet {
       width: 20rem;
@@ -398,7 +399,10 @@ h3 {
     padding: 5rem;
 
     @include tablet {
-      @include grid(3, 2rem);
+      @include grid(
+        3,
+        2rem
+      ); // Distribución en tres columnas en pantallas tablet
     }
   }
   .licencia {
@@ -420,7 +424,7 @@ h3 {
     font-family: $fuenteCursiva;
     margin: 0 0 1rem 0;
     font-size: 2.4rem;
-    color: $secundario;
+    color: $secundario; // Color secundario para los títulos en el footer
   }
   p,
   a {
@@ -433,7 +437,7 @@ h3 {
 
 .contenido-enlaces {
   @include tablet {
-    @include grid(2, $separacion);
+    @include grid(2, $separacion); // Diseño de dos columnas en tablet
     background-image: url(./img/logo2.jpg);
     background-repeat: no-repeat;
     background-position: right center;
@@ -482,14 +486,17 @@ li[hidden] {
 
   .listado-navegacion-detalle {
     @include tablet {
-      @include grid(3, 2rem);
+      @include grid(
+        3,
+        2rem
+      ); // Diseño en tres columnas para la navegación de detalles
     }
 
     li {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: center; // Centrado de contenido dentro de cada ítem
 
       a {
         display: flex;
@@ -499,14 +506,14 @@ li[hidden] {
 
         img {
           margin: 0 auto;
-          width: 6rem;
+          width: 6rem; // Tamaño de los iconos en la navegación de detalles
         }
 
         p {
           font-family: $fuenteCursiva;
           font-size: 3.2rem;
           color: $primario;
-          margin-top: 1rem;
+          margin-top: 1rem; // Separación superior para el texto del enlace
         }
       }
     }
@@ -521,7 +528,7 @@ li[hidden] {
 
 .contenido-inicio {
   @include tablet {
-    @include grid(2, 2rem);
+    @include grid(2, 2rem); // Diseño en dos columnas en pantallas tablet
   }
 
   .imagen {
@@ -532,9 +539,9 @@ li[hidden] {
     }
 
     img {
-      transform: rotate(-6deg);
+      transform: rotate(-6deg); // Efecto de rotación para la imagen
       border: 3rem solid $blanco;
-      box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35);
+      box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35); // Sombra para destacar la imagen
     }
   }
 
@@ -551,18 +558,18 @@ li[hidden] {
 /* I N T E R N A S  -  A C T I V I D A D E S */
 
 .categoria-actividades {
-  margin-bottom: $separacion;
+  margin-bottom: $separacion; // Espaciado inferior entre categorías de actividades
   @include tablet {
     display: flex;
     gap: $separacion;
-    align-items: center;
+    align-items: center; // Alineación en el centro para tabletas
   }
   &:last-of-type {
     margin-bottom: 0;
   }
   &:nth-child(even) {
     .texto {
-      order: -1;
+      order: -1; // Invierte el orden de texto e imagen en elementos pares
     }
   }
   .imagen,
@@ -581,7 +588,7 @@ li[hidden] {
         display: block;
         width: 50%;
         height: 5px;
-        background-color: $secundario;
+        background-color: $secundario; // Línea decorativa debajo de los títulos
       }
     }
   }
@@ -641,7 +648,7 @@ li[hidden] {
         text-decoration: none;
 
         &:hover {
-          text-decoration: underline;
+          text-decoration: underline; // Subrayado al pasar el cursor sobre enlaces
         }
       }
     }
@@ -652,7 +659,10 @@ li[hidden] {
     }
 
     tr:nth-child(even) {
-      background-color: color.adjust($grisClaro, $lightness: 10%);
+      background-color: color.adjust(
+        $grisClaro,
+        $lightness: 10%
+      ); // Color alternado para filas pares
     }
   }
 }
