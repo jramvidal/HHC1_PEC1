@@ -168,6 +168,18 @@ h3 {
   }
 }
 
+.icono-animado {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out; /* Suaviza el cambio solo en hover */
+
+  &:hover {
+    transform: rotate(360deg) scale(1.3); /* Gira 360 grados y aumenta el tamaño */
+  }
+}
+
 /* P R E S E N T A C I O N  -  C O N T E N I D O  */
 
 .contenido-principal {
@@ -385,7 +397,7 @@ h3 {
     margin: 0 auto; // Tamaño automático para el logo
 
     @include tablet {
-      width: 20rem;
+      width: 16rem;
       margin: 0;
     }
   }
@@ -395,6 +407,7 @@ h3 {
 
 .footer {
   background-color: $primario;
+
   .contenido-footer {
     padding: 5rem;
 
@@ -404,7 +417,18 @@ h3 {
         2rem
       ); // Distribución en tres columnas en pantallas tablet
     }
+
+    .mesinformacion {
+      grid-column: span 3; // Ocupa todo el ancho en tablet (si aplica grid)
+      text-align: center; // Centra el texto horizontalmente
+      margin: -5rem 0 2rem 0; // Separación del contenido inferior
+      font-size: 3.6rem; // Tamaño de fuente ajustado
+      font-weight: bold; // Negrita para el título
+      text-transform: uppercase; // Convierte el texto a mayúsculas
+      color: $primario; // Color primario para contraste
+    }
   }
+
   .licencia {
     text-align: center;
     margin: 0;
@@ -417,19 +441,56 @@ h3 {
   font-family: $fuenteCursiva;
   text-align: center;
   margin-bottom: $separacion;
+
   @include tablet {
     margin-bottom: 0;
   }
+
   h3 {
     font-family: $fuenteCursiva;
     margin: 0 0 1rem 0;
     font-size: 2.4rem;
     color: $secundario; // Color secundario para los títulos en el footer
   }
+
   p,
   a {
     font-size: 2rem;
     margin: 0;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  a {
+    text-align: center;
+    color: $blanco;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $secundario; // Cambio de color
+    }
+
+    &.activo {
+      color: $secundario; // Color especial para el enlace activo
+    }
   }
 }
 
@@ -531,17 +592,25 @@ li[hidden] {
     @include grid(2, 2rem); // Diseño en dos columnas en pantallas tablet
   }
 
-  .imagen {
-    margin-bottom: 5rem;
-
-    @include tablet {
-      margin: 0 2rem 0 0;
-    }
+  .imagen-clip {
+    width: 350px; // Ancho del contenedor
+    height: 350px; // Altura del contenedor
+    overflow: hidden; // Oculta las partes de la imagen fuera del área recortada
+    clip-path: polygon(
+      0% 20%,
+      60% 20%,
+      60% 0%,
+      100% 50%,
+      60% 100%,
+      60% 80%,
+      0% 80%
+    ); // Forma personalizada
+    margin: 2rem auto; // Centra el contenedor horizontalmente y añade margen superior e inferior
 
     img {
-      transform: rotate(-6deg); // Efecto de rotación para la imagen
-      border: 3rem solid $blanco;
-      box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35); // Sombra para destacar la imagen
+      width: 100%; // La imagen ocupa todo el ancho del contenedor
+      height: 100%; // La imagen ocupa toda la altura del contenedor
+      object-fit: cover; // Ajusta la imagen para cubrir el contenedor sin distorsión
     }
   }
 
