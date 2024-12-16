@@ -40,7 +40,7 @@
     <main class="contenedor contenido-principal padding-bottom-0">
       <h2><span>Festa de la</span> Carxofada Popular</h2>
 
-      <div class="contenido-detalle3">
+      <div class="contenido-detalle">
         <div class="texto">
           <p><strong>Data:</strong> 20 de gener de 2024</p>
           <p><strong>Hora:</strong> 12:00</p>
@@ -80,6 +80,39 @@
             esdeveniment, compartint una bona carxofa i gaudint de la festa amb
             la comunitat.
           </p>
+        </div>
+        <!-- Imágenes en la segunda columna -->
+        <div class="galeria-detalle">
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="
+                ./img/detalle3-destacada-mobile.jpg    1x,
+                ./img/detalle3-destacada-mobile-2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="
+                ./img/detalle3-destacada-desktop.jpg    1x,
+                ./img/detalle3-destacada-desktop-2x.jpg 2x
+              "
+            />
+            <img
+              src="./img/detalle1-destacada-desktop.jpg"
+              alt="Imagen destacada de la actividad Cercavila de Gegants"
+            />
+          </picture>
+          <img
+            src="./img/detalle3-adicional1.jpg"
+            alt="Detalle adicional 1 de la actividad"
+            class="imagen-adicional"
+          />
+          <img
+            src="./img/detalle3-adicional2.jpg"
+            alt="Detalle adicional 2 de la actividad"
+            class="imagen-adicional"
+          />
         </div>
       </div>
 
@@ -129,7 +162,7 @@
 
       <div class="footer-menu">
         <a href="index.html">Inici</a>
-        <a class="activo"href="actividades.html">Activitats</a>
+        <a class="activo" href="actividades.html">Activitats</a>
         <a href="presentacion.html">Presentació</a>
         <a href="enlaces.html">Enllaços</a>
       </div>

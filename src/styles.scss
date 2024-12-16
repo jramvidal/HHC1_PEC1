@@ -313,7 +313,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.6; // Superposición oscura para mejorar la legibilidad
+    opacity: 0.6;
   }
 
   .contenido-header {
@@ -401,6 +401,11 @@ h3 {
       margin: 0;
     }
   }
+
+  .logo img {
+    border-radius: 50%; /* Hace que la sombra siga la forma circular */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra aplicada */
+  }
 }
 
 /* F O O T E R  -  F O O T E R */
@@ -420,12 +425,12 @@ h3 {
 
     .mesinformacion {
       grid-column: span 3; // Ocupa todo el ancho en tablet (si aplica grid)
-      text-align: center; // Centra el texto horizontalmente
+      text-align: center;
       margin: -5rem 0 2rem 0; // Separación del contenido inferior
-      font-size: 3.6rem; // Tamaño de fuente ajustado
+      font-size: 3.6rem;
       font-weight: bold; // Negrita para el título
       text-transform: uppercase; // Convierte el texto a mayúsculas
-      color: $primario; // Color primario para contraste
+      color: $primario;
     }
   }
 
@@ -508,33 +513,69 @@ h3 {
 
 /* I N T E R N A S  -  D E T A L L E */
 
-.contenido-detalle1 {
-  @include tablet {
-    @include grid(2, $separacion);
-    background-image: url(./img/detalle1.jpg);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 40%;
-  }
-}
+.contenido-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Diseño desktop: dos columnas */
+  gap: 20px;
+  align-items: stretch; /* Asegura que ambas columnas llenen su espacio */
 
-.contenido-detalle2 {
-  @include tablet {
-    @include grid(2, $separacion);
-    background-image: url(./img/detalle2.jpg);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 40%;
+  .texto {
+    grid-column: 1; /* Mantener el texto en la primera columna */
   }
-}
 
-.contenido-detalle3 {
-  @include tablet {
-    @include grid(2, $separacion);
-    background-image: url(./img/detalle3.jpg);
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 40%;
+  .galeria-detalle {
+    grid-column: 2; /* Colocar imágenes en la segunda columna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+    gap: 50px;
+
+    picture {
+      max-width: 90%;
+      width: auto;
+      margin: 0 auto;
+      border: 8px solid #7b2a3b;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+
+      img {
+        max-width: 100%; /* Imagen dentro de <picture> no excede el contenedor */
+        width: auto;
+        height: auto;
+      }
+    }
+
+    img {
+      max-width: 90%; /* Imágenes normales fuera de <picture> */
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .imagen-adicional {
+      max-width: 70%;
+      display: block; /* Visible por defecto */
+      opacity: 0.7; /* Reduce un poco la opacidad de las adicionales */
+
+      @media (max-width: $telefono) {
+        display: none; /* Ocultar en teléfonos */
+      }
+    }
+  }
+
+  // Ajuste para pantallas pequeñas
+  @media (max-width: $telefono) {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 10px; /* Espaciado más pequeño entre elementos */
+
+    .galeria-detalle {
+      grid-column: 1; /* Reorganizar: galería primero */
+      order: -1;
+    }
+
+    .texto {
+      grid-column: 1; /* Reorganizar: texto después */
+    }
   }
 }
 
@@ -604,12 +645,12 @@ li[hidden] {
       60% 100%,
       60% 80%,
       0% 80%
-    ); // Forma personalizada
+    ); 
     margin: 2rem auto; // Centra el contenedor horizontalmente y añade margen superior e inferior
 
     img {
-      width: 100%; // La imagen ocupa todo el ancho del contenedor
-      height: 100%; // La imagen ocupa toda la altura del contenedor
+      width: 100%;
+      height: 100%; 
       object-fit: cover; // Ajusta la imagen para cubrir el contenedor sin distorsión
     }
   }
@@ -631,7 +672,7 @@ li[hidden] {
   @include tablet {
     display: flex;
     gap: $separacion;
-    align-items: center; // Alineación en el centro para tabletas
+    align-items: center; 
   }
   &:last-of-type {
     margin-bottom: 0;
