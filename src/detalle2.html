@@ -19,7 +19,10 @@
       <div class="contenido-header contenedor">
         <div class="barra">
           <div class="logo">
-            <img src="./img/logo.svg" alt="Logotipo de la web formado por un ave y la ciudad de El Prat de fondo" />
+            <img
+              src="./img/logo.svg"
+              alt="Logotipo de la web formado por un ave y la ciudad de El Prat de fondo"
+            />
           </div>
 
           <nav class="nav-principal" aria-label="Navegación principal">
@@ -80,26 +83,18 @@
         </div>
         <!-- Imágenes en la segunda columna -->
         <div class="galeria-detalle">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="
-                ./img/detalle2-destacada-mobile.jpg    1x,
-                ./img/detalle2-destacada-mobile-2x.jpg 2x
-              "
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="
-                ./img/detalle2-destacada-desktop.jpg    1x,
-                ./img/detalle2-destacada-desktop-2x.jpg 2x
-              "
-            />
-            <img
-              src="./img/detalle1-destacada-desktop.jpg"
-              alt="Imagen destacada de la actividad Cercavila de Gegants"
-            />
-          </picture>
+          <img
+            src="./img/detalle2-destacada-desktop.jpg"
+            srcset="
+              ./img/detalle2-destacada-mobile.jpg      768w,
+              ./img/detalle2-destacada-mobile-2x.jpg  1536w,
+              ./img/detalle2-destacada-desktop.jpg    1024w,
+              ./img/detalle2-destacada-desktop-2x.jpg 2048w
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Imagen destacada de la actividad Cercavila de Gegants"
+          />
+
           <img
             src="./img/detalle2-adicional1.jpg"
             alt="Detalle adicional 1 de la actividad"
