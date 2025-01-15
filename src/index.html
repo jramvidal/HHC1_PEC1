@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
 
     <!-- Script principal de la aplicación cargado como módulo -->
@@ -24,7 +26,10 @@
       <div class="contenido-header contenedor">
         <div class="barra">
           <div class="logo">
-            <img src="./img/logo.svg" alt="Logotipo de la web formado por un ave y la ciudad de El Prat de fondo" />
+            <img
+              src="./img/logo.svg"
+              alt="Logotipo de la web formado por un ave y la ciudad de El Prat de fondo"
+            />
           </div>
 
           <nav class="nav-principal" aria-label="Navegación principal">
@@ -46,7 +51,11 @@
 
       <div class="contenido-inicio">
         <div class="imagen-clip">
-          <img src="./img/correfoc1.jpg" alt="Imatge del Correfoc" />
+          <img
+            src="./img/correfoc1.webp"
+            alt="Imatge del Correfoc"
+            loading="lazy"
+          />
         </div>
 
         <div class="texto">

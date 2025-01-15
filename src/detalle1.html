@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
     <script type="module" src="app.js" defer></script>
   </head>
@@ -90,12 +92,12 @@
         <!-- Imágenes en la segunda columna -->
         <div class="galeria-detalle">
           <img
-            src="./img/detalle1-destacada-desktop.jpg"
+            src="./img/detalle1-destacada-desktop.webp"
             srcset="
-              ./img/detalle1-destacada-mobile.jpg      768w,
-              ./img/detalle1-destacada-mobile-2x.jpg  1536w,
-              ./img/detalle1-destacada-desktop.jpg    1024w,
-              ./img/detalle1-destacada-desktop-2x.jpg 2048w
+              ./img/detalle1-destacada-mobile.webp      768w,
+              ./img/detalle1-destacada-mobile-2x.webp  1536w,
+              ./img/detalle1-destacada-desktop.webp    1024w,
+              ./img/detalle1-destacada-desktop-2x.webp 2048w
             "
             sizes="(max-width: 768px) 100vw, 50vw"
             alt="Imagen destacada de la actividad Cercavila de Gegants"
@@ -103,13 +105,13 @@
           />
 
           <img
-            src="./img/detalle1-adicional1.jpg"
+            src="./img/detalle1-adicional1.webp"
             alt="Detalle adicional 1 de la actividad"
             class="imagen-adicional"
             loading="lazy"
           />
           <img
-            src="./img/detalle1-adicional2.jpg"
+            src="./img/detalle1-adicional2.webp"
             alt="Detalle adicional 2 de la actividad"
             class="imagen-adicional"
             loading="lazy"
@@ -125,14 +127,14 @@
           <li class="volver">
             <!-- Enlace para volver a la página de actividades -->
             <a href="actividades.html">
-              <img src="./img/arriba.png" alt="icono volver a actividades" />
+              <img src="./img/arriba.png" alt="icono volver a actividades" loading="lazy"/>
               <p>Torna a ACTIVITATS</p>
             </a>
           </li>
 
           <li class="siguiente">
             <a href="detalle2.html">
-              <img src="./img/derecha.png" alt="icono siguiente" />
+              <img src="./img/derecha.png" alt="icono siguiente" loading="lazy"/>
               <p>Següent</p>
             </a>
           </li>
