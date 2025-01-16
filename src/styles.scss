@@ -335,9 +335,28 @@ h3 {
 .header-presentacion {
   background-image: url(./img/header_presentacion.webp);
 }
+
+
+
+
+
 .header-inicio {
-  background-image: url(./img/header_inicio.webp);
+  background-image: url('./img/header_inicio-480w.webp'); /* Predeterminado: móvil */
+
+  @media (min-width: 768px) {
+    background-image: url('./img/header_inicio-1024w.webp'); /* Tabletas y laptops */
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url('./img/header_inicio-1920w.webp'); /* Monitores grandes */
+  }
 }
+
+
+
+
+
+
 .header-actividades {
   background-image: url(./img/header_actividades.webp);
 }
