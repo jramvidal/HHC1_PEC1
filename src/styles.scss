@@ -30,21 +30,25 @@ html {
   font-size: 62.5%; // Base 10px para calcular rem
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 body {
   font-family: $fuenteSecundaria;
   font-size: 1.6rem;
   background-color: $marronClaro;
 }
+
 p {
   color: $negro;
   font-size: 1.6rem;
   line-height: 2;
 }
+
 .contenedor {
   width: 95%;
   max-width: 120rem;
@@ -55,11 +59,13 @@ a {
   text-decoration: none;
   color: $negro;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 ul {
   list-style: none;
   padding: 0;
@@ -77,9 +83,11 @@ h3 {
   text-align: center;
   line-height: 1.5;
 }
+
 h1 {
   font-size: 4rem; // Tamaño específico para el título principal
 }
+
 h2 {
   font-size: 3.6rem;
   color: $primario;
@@ -108,6 +116,7 @@ h2 {
   span {
     color: $blanco;
   }
+
   &::after {
     display: none;
   }
@@ -148,6 +157,7 @@ h3 {
 
 .iconos {
   margin-top: 5rem;
+
   .listado-iconos {
     @include tablet {
       @include grid(3, 2rem); // Distribución en 3 columnas en pantallas tablet
@@ -158,6 +168,7 @@ h3 {
         margin: 0 auto;
         width: 6rem; // Tamaño de los iconos en presentación
       }
+
       p {
         font-family: $fuenteCursiva;
         font-size: 3.2rem;
@@ -173,10 +184,12 @@ h3 {
   height: 64px;
   display: block;
   margin: 0 auto;
-  transition: transform 0.5s ease-in-out; /* Suaviza el cambio solo en hover */
+  transition: transform 0.5s ease-in-out;
+  /* Suaviza el cambio solo en hover */
 
   &:hover {
-    transform: rotate(360deg) scale(1.3); /* Gira 360 grados y aumenta el tamaño */
+    transform: rotate(360deg) scale(1.3);
+    /* Gira 360 grados y aumenta el tamaño */
   }
 }
 
@@ -212,55 +225,72 @@ h3 {
     @include desktop {
       &:nth-child(1) {
         grid-row: 1 / 3; // Imagen principal ocupando más espacio en pantalla grande
+
         img {
           height: 62rem;
           object-position: center;
         }
       }
+
       &:nth-child(2) {
         grid-column: 2 / 4;
+
         img {
           width: 62rem; // Imagen expandida horizontalmente en pantalla grande
         }
       }
+
       &:nth-child(4) {
         grid-row: 2 / 4;
+
         img {
           height: 62rem; // Imagen expandida verticalmente en pantalla grande
         }
       }
+
       &:nth-child(5) {
         grid-column: 3 / 5;
+
         img {
           width: 62rem;
         }
       }
+
       &:nth-child(6) {
         grid-column: 3 / 5;
+
         img {
           width: 62rem;
         }
       }
+
       &:nth-child(7) {
         grid-row: 3 / 5;
+
         img {
           height: 62rem;
         }
       }
+
       &:nth-child(8) {
         grid-column: 2 / 5;
+
         img {
           width: 94rem; // Imagen ocupando más espacio horizontal en pantalla grande
         }
       }
+
       &:nth-child(9) {
         grid-column: 1 / 3;
+
         img {
           width: 62rem;
         }
       }
+
       &:nth-child(10) {
         grid-column: 3 / 5;
+
         img {
           width: 62rem;
         }
@@ -301,6 +331,7 @@ h3 {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+
   @include tablet {
     min-height: 70rem; // Altura mínima en tablets
   }
@@ -324,6 +355,7 @@ h3 {
       color: $blanco;
       text-transform: uppercase;
       margin-top: 5rem;
+
       @include tablet {
         margin-top: 10rem; // Mayor margen en pantallas más grandes
       }
@@ -333,38 +365,78 @@ h3 {
 
 // Header de cada página
 .header-presentacion {
-  background-image: url(./img/header_presentacion.webp);
-}
-
-
-
-
-
-.header-inicio {
-  background-image: url('./img/header_inicio-480w.webp'); /* Predeterminado: móvil */
+  background-image: url("./img/header_presentacion-480w.webp");
+  /* Predeterminado: móvil */
 
   @media (min-width: 768px) {
-    background-image: url('./img/header_inicio-1024w.webp'); /* Tabletas y laptops */
+    background-image: url("./img/header_presentacion-1024w.webp");
+    /* Tabletas y laptops */
   }
 
   @media (min-width: 1280px) {
-    background-image: url('./img/header_inicio-1920w.webp'); /* Monitores grandes */
+    background-image: url("./img/header_presentacion-1920w.webp");
+    /* Monitores grandes */
   }
 }
 
+.header-inicio {
+  background-image: url("./img/header_inicio-480w.webp");
+  /* Predeterminado: móvil */
 
+  @media (min-width: 768px) {
+    background-image: url("./img/header_inicio-1024w.webp");
+    /* Tabletas y laptops */
+  }
 
-
-
+  @media (min-width: 1280px) {
+    background-image: url("./img/header_inicio-1920w.webp");
+    /* Monitores grandes */
+  }
+}
 
 .header-actividades {
-  background-image: url(./img/header_actividades.webp);
+  background-image: url("./img/header_actividades-480w.webp");
+  /* Predeterminado: móvil */
+
+  @media (min-width: 768px) {
+    background-image: url("./img/header_actividades-1024w.webp");
+    /* Tabletas y laptops */
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("./img/header_actividades-1920w.webp");
+    /* Monitores grandes */
+  }
 }
+
 .header-detalle {
-  background-image: url(./img/header_detalle.webp);
+  background-image: url("./img/header_detalle-480w.webp");
+  /* Predeterminado: móvil */
+
+  @media (min-width: 768px) {
+    background-image: url("./img/header_detalle-1024w.webp");
+    /* Tabletas y laptops */
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("./img/header_detalle-1920w.webp");
+    /* Monitores grandes */
+  }
 }
+
 .header-enlaces {
-  background-image: url(./img/header_enlaces.webp);
+  background-image: url("./img/header_enlaces-480w.webp");
+  /* Predeterminado: móvil */
+
+  @media (min-width: 768px) {
+    background-image: url("./img/header_enlaces-1024w.webp");
+    /* Tabletas y laptops */
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("./img/header_enlaces-1920w.webp");
+    /* Monitores grandes */
+  }
 }
 
 /* H E A D E R  -  N A V E G A C I O N */
@@ -373,6 +445,7 @@ h3 {
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+
   @include tablet {
     flex-direction: row;
     gap: 1rem;
@@ -386,6 +459,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 1rem;
+
     @include tablet {
       margin-bottom: 0;
     }
@@ -405,6 +479,7 @@ h3 {
 .barra {
   display: flex;
   flex-direction: column;
+
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
@@ -422,8 +497,10 @@ h3 {
   }
 
   .logo img {
-    border-radius: 50%; /* Hace que la sombra siga la forma circular */
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra aplicada */
+    border-radius: 50%;
+    /* Hace que la sombra siga la forma circular */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra aplicada */
   }
 }
 
@@ -534,20 +611,26 @@ h3 {
 
 .contenido-detalle {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Diseño desktop: dos columnas */
+  grid-template-columns: 1fr 1fr;
+  /* Diseño desktop: dos columnas */
   gap: 20px;
-  align-items: stretch; /* Asegura que ambas columnas llenen su espacio */
+  align-items: stretch;
+  /* Asegura que ambas columnas llenen su espacio */
 
   .texto {
-    grid-column: 1; /* Mantener el texto en la primera columna */
+    grid-column: 1;
+    /* Mantener el texto en la primera columna */
   }
 
   .galeria-detalle {
-    grid-column: 2; /* Colocar imágenes en la segunda columna */
+    grid-column: 2;
+    /* Colocar imágenes en la segunda columna */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar contenido verticalmente */
-    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: center;
+    /* Centrar contenido verticalmente */
+    align-items: center;
+    /* Centrar contenido horizontalmente */
     gap: 50px;
 
     picture {
@@ -555,17 +638,20 @@ h3 {
       width: auto;
       margin: 0 auto;
       border: 8px solid #7b2a3b;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Sombra para resaltar */
 
       img {
-        max-width: 100%; /* Imagen dentro de <picture> no excede el contenedor */
+        max-width: 100%;
+        /* Imagen dentro de <picture> no excede el contenedor */
         width: auto;
         height: auto;
       }
     }
 
     img {
-      max-width: 90%; /* Imágenes normales fuera de <picture> */
+      max-width: 90%;
+      /* Imágenes normales fuera de <picture> */
       width: auto;
       height: auto;
       margin: 0 auto;
@@ -573,27 +659,34 @@ h3 {
 
     .imagen-adicional {
       max-width: 70%;
-      display: block; /* Visible por defecto */
-      opacity: 0.7; /* Reduce un poco la opacidad de las adicionales */
+      display: block;
+      /* Visible por defecto */
+      opacity: 0.7;
+      /* Reduce un poco la opacidad de las adicionales */
 
       @media (max-width: $telefono) {
-        display: none; /* Ocultar en teléfonos */
+        display: none;
+        /* Ocultar en teléfonos */
       }
     }
   }
 
   // Ajuste para pantallas pequeñas
   @media (max-width: $telefono) {
-    grid-template-columns: 1fr; /* Una sola columna */
-    gap: 10px; /* Espaciado más pequeño entre elementos */
+    grid-template-columns: 1fr;
+    /* Una sola columna */
+    gap: 10px;
+    /* Espaciado más pequeño entre elementos */
 
     .galeria-detalle {
-      grid-column: 1; /* Reorganizar: galería primero */
+      grid-column: 1;
+      /* Reorganizar: galería primero */
       order: -1;
     }
 
     .texto {
-      grid-column: 1; /* Reorganizar: texto después */
+      grid-column: 1;
+      /* Reorganizar: texto después */
     }
   }
 }
@@ -664,12 +757,12 @@ li[hidden] {
       60% 100%,
       60% 80%,
       0% 80%
-    ); 
+    );
     margin: 2rem auto; // Centra el contenedor horizontalmente y añade margen superior e inferior
 
     img {
       width: 100%;
-      height: 100%; 
+      height: 100%;
       object-fit: cover; // Ajusta la imagen para cubrir el contenedor sin distorsión
     }
   }
@@ -688,25 +781,31 @@ li[hidden] {
 
 .categoria-actividades {
   margin-bottom: $separacion; // Espaciado inferior entre categorías de actividades
+
   @include tablet {
     display: flex;
     gap: $separacion;
-    align-items: center; 
+    align-items: center;
   }
+
   &:last-of-type {
     margin-bottom: 0;
   }
+
   &:nth-child(even) {
     .texto {
       order: -1; // Invierte el orden de texto e imagen en elementos pares
     }
   }
+
   .imagen,
   .texto {
     flex: 1;
   }
+
   .texto {
     margin-top: 1rem;
+
     h3 {
       margin: 0;
       text-align: left;
@@ -728,6 +827,7 @@ li[hidden] {
 .text-center {
   text-align: center;
 }
+
 .bg-white {
   background-color: $blanco;
 }
